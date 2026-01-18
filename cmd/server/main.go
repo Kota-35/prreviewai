@@ -13,6 +13,8 @@ func main() {
 
 	router.GET("/health", server.Health)
 
+	router.POST("/webhook", server.Webhook)
+
 	if config.Env.AppEnv == config.AppEnvDevelopment {
 		router.Run(fmt.Sprintf("localhost:%s", config.Env.Port))
 	} else {
