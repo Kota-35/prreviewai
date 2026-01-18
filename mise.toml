@@ -1,2 +1,8 @@
 [tools]
 go = "1.25.6"
+
+[env]
+'_'.file = { path = ".env" }
+
+[tasks.dev]
+run = "go run ./cmd/server/main.go"
